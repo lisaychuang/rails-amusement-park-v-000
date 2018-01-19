@@ -24,7 +24,7 @@ describe 'Feature Test: User Signup', :type => :feature do
     visit_signin
     expect(current_path).to eq('/signin')
     user_login
-    expect(current_path).to eq('/users/2')
+    expect(current_path).to eq('/users/1')
     expect(page).to have_content("Mindy")
     expect(page).to have_content("Mood")
     expect(page).to have_content("happy")
@@ -71,7 +71,7 @@ describe 'Feature Test: User Signup', :type => :feature do
     visit_signin
     expect(current_path).to eq('/signin')
     admin_login
-    expect(current_path).to eq('/users/3')
+    expect(current_path).to eq('/users/2')
     expect(page).to have_content("Walt Disney")
     expect(page).to have_content("ADMIN")
   end

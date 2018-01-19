@@ -8,10 +8,7 @@ class UsersController < ApplicationController
     
     def create 
         p = user_params
-        binding.pry
-
         @user = User.create(p)
-        binding.pry
             session[:user_id] = @user.id
             redirect_to user_path(@user)
     end
