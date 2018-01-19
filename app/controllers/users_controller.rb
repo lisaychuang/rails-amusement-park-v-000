@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     end
     
     def show 
-        if logged_in? 
+        if logged_in?
             @user = User.find(params[:id])
         else 
             redirect_to root_path

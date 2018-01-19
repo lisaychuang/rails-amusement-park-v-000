@@ -24,7 +24,7 @@ describe 'Feature Test: User Signup', :type => :feature do
     visit_signin
     expect(current_path).to eq('/signin')
     user_login
-    expect(current_path).to eq('/users/1')
+    expect(current_path).to eq('/users/2')
     expect(page).to have_content("Mindy")
     expect(page).to have_content("Mood")
     expect(page).to have_content("happy")
@@ -71,7 +71,7 @@ describe 'Feature Test: User Signup', :type => :feature do
     visit_signin
     expect(current_path).to eq('/signin')
     admin_login
-    expect(current_path).to eq('/users/2')
+    expect(current_path).to eq('/users/3')
     expect(page).to have_content("Walt Disney")
     expect(page).to have_content("ADMIN")
   end
@@ -267,15 +267,6 @@ describe 'Feature Test: Go on a Ride', :type => :feature do
 end
 
 describe 'Feature Test: Admin Flow', :type => :feature do
-
-# @amy = User.create(
-#   name: "Amy Poehler",
-#   height: 58,
-#   happiness: 3,
-#   nausea: 2,
-#   tickets:  10,
-#   password: "password"
-# )
 
   before :each do
     @rollercoaster = Attraction.create(
