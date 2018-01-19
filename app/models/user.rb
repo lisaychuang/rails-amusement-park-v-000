@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   validates :password, presence: true
-
+  
   # Include default devise modules. Others available are:
   # :validatable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable

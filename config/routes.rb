@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
   resources :attractions
+  resources :rides
   root "application#welcome"
 
   get "/sign_up" => "users#new"
